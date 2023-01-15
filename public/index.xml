@@ -15,5 +15,14 @@
       <description>你好哇！</description>
     </item>
     
+    <item>
+      <title>友情链接</title>
+      <link>https://changxiawushi.github.io/friends/</link>
+      <pubDate>Sat, 14 Jan 2023 16:14:48 -0800</pubDate>
+      
+      <guid>https://changxiawushi.github.io/friends/</guid>
+      <description>欢迎拜访以下星球</description>
+    </item>
+    
   </channel>
 </rss>
