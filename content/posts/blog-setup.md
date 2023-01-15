@@ -6,6 +6,8 @@ summary: 三流程序员现身啦
 ---
 
 
+# 本博搭建记录
+
 搭建环境：macOS
 
 《总结一下要用GitHub Pages+Hugo，以及本篇非教程（指路教程），而是记录》
@@ -20,9 +22,9 @@ summary: 三流程序员现身啦
 
 ## 建立GitHub Pages repo
 
-建立一个新的repo，名为`用户名.github.io`。
-
 《《图片》》
+
+建立一个新的repo，名为`用户名.github.io`。注意如果GitHub账户是免费plan，这个用来设置GitHub Pages的repo一定要是public repo。
 
 我选择用GitHub Desktop，跟着官方网页上的步骤来clone repo到本地。
 
@@ -48,7 +50,7 @@ hugo new site 用户名.github.io -f yml --force
 
 决定用Hugo的PaperMod这个theme，因为感觉好看，功能看起来也比较全。跟着PaperMod的安装步骤走：[Installation · adityatelange/hugo-PaperMod Wiki (github.com)](https://github.com/adityatelange/hugo-PaperMod/wiki/Installation)
 
-使用了Installation中的Method 1，直接clone到repo里。最后一步需要修改文件夹里的`config.yml`，我在Visual Studio Code中打开了整个文件夹（其实用其他plain text editor也可以，不过用VSCode可以直接在里面打开Terminal，比较方便）。把其他行也改了一下，`languageCode`先删掉了（尝试了一下，如果设置成中文会导致后续有一些不方便的地方，之后有时间再改……吧，可以参考[I18n Tutorial: How to Go Multilingual with Hugo | Phrase](https://phrase.com/blog/posts/i18n-tutorial-how-to-go-multilingual-with-hugo/)）。
+刚开始使用了Installation中的Method 1，直接git clone到repo里。但后面碰到了一些问题，所以换成了使用Method 1的git submodules。最后一步需要修改文件夹里的`config.yml`，我在Visual Studio Code中打开了整个文件夹（其实用其他plain text editor也可以，不过用VSCode可以直接在里面打开Terminal，比较方便）。把其他行也改了一下，`languageCode`先删掉了（尝试了一下，如果设置成中文会导致后续有一些不方便的地方，之后有时间再改……吧，可以参考[I18n Tutorial: How to Go Multilingual with Hugo | Phrase](https://phrase.com/blog/posts/i18n-tutorial-how-to-go-multilingual-with-hugo/)）。
 
 ```yaml
 baseURL: https://changxiawushi.github.io/
@@ -112,11 +114,57 @@ params:
 
 ### 添加菜单
 
+在`config.yml`中添加
+
+```yaml
+# 在页面上方加入菜单
+menu:
+  main:
+    - name: 标签
+      url: tags/
+      # 指定“标签”作为第一个出现的
+      weight: 1
+    - name: RSS订阅
+      url: index.xml
+      weight: 2
+    - name: 文章
+      url: posts/
+      weight: 3
+```
+
+《再插入图片》
+
 RSS订阅参考了[Setting up an RSS feed for a Hugo blog using the PaperMod Theme | by Erica Pisani | Medium](https://medium.com/@ericapisani/setting-up-an-rss-feed-for-a-hugo-blog-using-the-papermod-theme-a141b3fa1ccd)
+
+在`config.yml`中添加
+
+```yaml
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+```
+
+《需要测试一下捏》
+
+现在还没有标签，所以需要去博文中添加一下。
 
 ### 修改博文
 
-想要研究一下怎么给博文加标签、要在博文用到的图片应该叫什么等等。
+#### 标签
+
+```markdown
+---
+title: "Hello World"
+date: 2023-01-14T16:14:48-08:00
+draft: false
+summary: 你好哇！
+tags: ["测试", "你好"]
+---
+```
+
+最后的tags就是标签啦，可以定义多个，拿逗号隔开就好。这些标签会自动出现在`网站/tags`（本地预览可能会有些延迟），点击任何一个就会显示所有带此标签的文章。
 
 #### 图片
 
@@ -124,13 +172,41 @@ RSS订阅参考了[Setting up an RSS feed for a Hugo blog using the PaperMod The
 
 参考demo网页带图博文的文件结构：[hugo-PaperMod/content/posts/papermod/papermod-features at exampleSite · adityatelange/hugo-PaperMod (github.com)](https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content/posts/papermod/papermod-features)
 
-在`content/posts`里创建一个新的文件夹，与
+在`content/posts`里创建一个新的文件夹`hello-world`（与原markdown文件同名），把`hello-world.md`移到新创建的`hello-word`文件夹里再改名为`index.md`，最后在`hello-world`文件夹中另创建一个`images`文件夹放图片。
 
 注：在本地预览时图片可能加载不出来，如果需要确认，可以把`config.yml`里的`baseURL`改成本地预览的链接，如`baseURL: http://localhost:1313`（[参考](https://discourse.gohugo.io/t/preview-images-with-localhost/33095)）。或者用Markdown Editor（比如Typora）查看确认就不用改设置啦。
 
-再注：用Markdown语法插入图片时，记得`./images/xxx.png`或者`images/xxx.png`都可以，但`/images/xxx.png`并非《继续》
+再注：用Markdown语法插入图片时，记得`./images/xxx.png`或者`images/xxx.png`都可以，但`/images/xxx.png`
+
+再再注：保险起见，我安装了[ExifTool](https://exiftool.org/)，并在上传前用它抹去图片中可能暴露个人信息的metadata（[参考](https://stackoverflow.com/questions/66192531/exiftool-how-to-remove-all-metadata-from-all-files-possible-inside-a-folder-an)）。
+
+```bash
+brew install exiftool
+exiftool -a -all:all= -r path/to/images
+```
+
+## 发布测试
+
+现在可以把本地的文件都push到GitHub，看一下网站的效果啦。
+
+跟着Hugo的教程：[Host on GitHub | Hugo (gohugo.io)](https://gohugo.io/hosting-and-deployment/hosting-on-github/)
+
+创建GitHub Action的时候，因为不熟悉碰到了好多问题。首先是看不到action有在跑，然后发现是把文件放错了位置，一定要放在`.github/workflows/`这个文件夹里面才可以。放对了位置以后push能看到action在跑，但碰到了另一个error message。尝试了一些网上的建议无果以后，发现[mzfr.github.io/.gitmodules at f02722a1499b155816d1cc15d81a74af6864c0c6 · mzfr/mzfr.github.io](https://github.com/mzfr/mzfr.github.io/blob/f02722a1499b155816d1cc15d81a74af6864c0c6/.gitmodules)
+
+
+
+
 
 ## 一些困难
 
 - 语言设置
+  - 可参考[hugo-PaperModX/config.default.yml at master · reorx/hugo-PaperModX (github.com)](https://github.com/reorx/hugo-PaperModX/blob/master/exampleSite/config.default.yml)
 - Hugo vs PaperMod
+
+## 立Flag
+
+后续想做的：
+
+- 增加搜索功能
+- 添加评论区
+- 细分到每个标签的RSS订阅链接
