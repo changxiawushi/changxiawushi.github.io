@@ -3,7 +3,7 @@ baseURL: https://changxiawushi.github.io/
 # baseURL: http://localhost:1313
 # languageCode: zh-CN
 title: 长夏无事
-theme: "github.com/adityatelange/hugo-PaperMod"
+theme: "PaperMod"
 
 paginate: 5
 enableEmoji: true
