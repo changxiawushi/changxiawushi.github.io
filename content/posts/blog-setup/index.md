@@ -1,7 +1,7 @@
 ---
 title: 本博搭建记录 (Hugo + GitHub Pages)
-date: 2023-01-14T17:00:04-08:00
-draft: true
+date: 2023-01-15T21:00:09-08:00
+draft: false
 summary: 这可不是一个技术博客呢，别误会了！
 tags:
   - 记录
