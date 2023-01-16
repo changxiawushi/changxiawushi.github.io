@@ -139,7 +139,7 @@ menu:
       weight: 3
 ```
 
-想再添加一个菜单选项放友情链接，找了一会儿没发现怎么做，于是凭借猜测创建了`posts/friends.md`这个文件。这样`用户名.github.io/friends`就会显示这篇文章。唯一的缺点是它会被当作是普通的博文出现在RSS阅读器中，也会显示发布日期和阅读时间。
+想再添加一个菜单选项放友情链接，找了一会儿没发现怎么做，于是凭借猜测创建了`content/friends.md`这个文件。这样`用户名.github.io/friends`就会显示这篇文章。唯一的缺点是它会被当作是普通的博文出现在RSS阅读器中，也会显示发布日期和阅读时间。
 
 ![friends](./images/friends.png#center)
 
@@ -184,10 +184,11 @@ tags：
 ```
 /
 ├── content/
-│   └── hello-world/
-│       └── images/
-│           └── 图片.jpg
-│       └── index.md
+│   └── posts/
+│       └── hello-world/
+│           └── images/
+│               └── 图片.jpg
+│           └── index.md
 ```
 
 > 注：在本地预览时如果图片加载不出来，可以把`config.yml`里的`baseURL`改成本地预览的链接，如`baseURL: http://localhost:1313`（[参考](https://discourse.gohugo.io/t/preview-images-with-localhost/33095)）。或者用Markdown Editor（比如Typora）查看确认就不用改设置啦。
