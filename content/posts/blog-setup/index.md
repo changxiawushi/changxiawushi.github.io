@@ -288,6 +288,7 @@ GitHub Pages也通过一个action（`pages-build-deployment`）来部署网页�
 - 在Markdown中插入HTML代码，参考[Simple Shortcode to Insert Raw HTML in Hugo · Ana Ulin](https://anaulin.org/blog/hugo-raw-html-shortcode/)
 - 更改网页图标，根据[PaperMod的教程](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-faq/#adding-custom-favicons)尝试了一些图，再用[Favicon.io](https://favicon.io/)生成图片后直接复制到`static`文件夹中。打开浏览器的DevTools，再右键刷新图标选择"Empty cache and hard refresh"就能看到了
   ![hard-refresh](./images/hard-refresh.png#center)
+- 搜索功能，跟着[PaperMod的步骤](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/#search-page)走非常简单
 
 ## 一些困难
 
@@ -300,7 +301,6 @@ GitHub Pages也通过一个action（`pages-build-deployment`）来部署网页�
 
 后续想做的：
 
-- 增加搜索功能（放在菜单栏）
 - 添加评论区
 - 找一下怎么加citation/reference（[例子](https://kpwn.de/2021/09/how-to-set-up-this-blog/#fn:1)，找到的一个[回答](https://discourse.gohugo.io/t/cite-within-a-post/27172/2)用不了）
 - 学习一下shortcode
