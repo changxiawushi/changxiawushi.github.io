@@ -4,7 +4,7 @@ date: 2023-01-15T16:14:48-08:00
 draft: false
 ---
 
-可以通过RSS订阅本博客的所有文章：[https://changxiawushi.github.io/index.xml](https://changxiawushi.github.io/index.xml)
+可以通过RSS订阅本博客的所有文章：[https://changxiawushi.github.io/index.xml](../index.xml)
 
 也可以打开[标签页](../tags)，点击想要订阅的标签，再点下面这个样子的订阅按钮就好了。⬇️
 
