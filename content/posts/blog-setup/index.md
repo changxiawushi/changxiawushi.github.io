@@ -289,6 +289,8 @@ GitHub Pages也通过一个action（`pages-build-deployment`）来部署网页�
 - 更改网页图标，根据[PaperMod的教程](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-faq/#adding-custom-favicons)尝试了一些图，再用[Favicon.io](https://favicon.io/)生成图片后直接复制到`static`文件夹中。打开浏览器的DevTools，再右键刷新图标选择"Empty cache and hard refresh"就能看到了
   ![hard-refresh](./images/hard-refresh.png#center)
 - 搜索功能，跟着[PaperMod的步骤](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/#search-page)走非常简单
+- 添加评论区，结合[PaperMod](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/#comments)和[Hugo](https://gohugo.io/content-management/comments/)的指南，先注册了[Disqus](https://disqus.com/)账号，然后选择Universal Code，再复制黏贴到`layouts/partials/comments.html`中就好啦！
+  ![disqus-comment](./images/disqus-comment.png#center)
 
 ## 一些困难
 
@@ -301,7 +303,6 @@ GitHub Pages也通过一个action（`pages-build-deployment`）来部署网页�
 
 后续想做的：
 
-- 添加评论区
 - 找一下怎么加citation/reference（[例子](https://kpwn.de/2021/09/how-to-set-up-this-blog/#fn:1)，找到的一个[回答](https://discourse.gohugo.io/t/cite-within-a-post/27172/2)用不了）
 - 学习一下shortcode
   - [官方链接](https://gohugo.io/content-management/shortcodes/)
