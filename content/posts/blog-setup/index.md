@@ -197,6 +197,13 @@ tags：
 │           └── index.md
 ```
 
+官方指南：[Page Bundles](https://gohugo.io/content-management/page-bundles/)
+
+如果是一开始就想创建page bundle，可以直接使用下面的指令。不过`images`文件夹还是要自己创建。也可以用bash script优化更多步骤（[参考](https://discourse.gohugo.io/t/is-there-a-hugo-command-to-create-page-bundle/11942/2)）。
+```bash
+hugo new posts/<post-name>/index.md
+```
+
 > 注：在本地预览时如果图片加载不出来，可以把`config.yml`里的`baseURL`改成本地预览的链接，如`baseURL: http://localhost:1313`（[参考](https://discourse.gohugo.io/t/preview-images-with-localhost/33095)）。或者用Markdown Editor（比如Typora）查看确认就不用改设置啦。
 
 > 再注：用Markdown语法插入图片时，记得`./images/xxx.png`或者`images/xxx.png`都可以，但如果用`/images/xxx.png`则表示`images`文件夹在根目录里，所以是不对的。
@@ -285,6 +292,9 @@ GitHub Pages也通过一个action（`pages-build-deployment`）来部署网页�
 - 增加搜索功能（放在菜单栏）
 - 添加评论区
 - 给博客添加默认图标
+- 找一下怎么加citation/reference（[例子](https://kpwn.de/2021/09/how-to-set-up-this-blog/#fn:1)，找到的一个[回答](https://discourse.gohugo.io/t/cite-within-a-post/27172/2)用不了）
+- 学习一下shortcode
+  - [官方链接](https://gohugo.io/content-management/shortcodes/)
 
 ## 总结
 
