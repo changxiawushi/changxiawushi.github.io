@@ -15,3 +15,4 @@ ShowReadingTime: false
 - 一笼虾饺有四个 https://fourxiajiao.github.io/
 - 沉默之沙｜云五的自留地 https://yukieyun.net/
 - The Wandering Allison https://thewanderingallison.github.io/
+- 旋转木马鏖战记 https://samsmerrygoround.github.io/
