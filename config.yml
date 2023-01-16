@@ -14,20 +14,25 @@ enableEmoji: true
 #       languageName: 中文
 menu:
   main:
+    - name: 首页
+      url: /
+      weight: 1
     - name: 标签
       url: tags/
-      weight: 1
-    - name: RSS订阅
-      url: index.xml
       weight: 2
+    - name: RSS订阅
+      url: rss/
+      weight: 3
     # - name: 搜索
     #   url: search/
-    - name: 文章
-      url: posts/
-      weight: 4
-    - name: 友链
+    - name: 友情链接
       url: friends/
-      weight: 3
+      weight: 4
+
+cover:
+  hidden: false # hide everywhere but not in structured data
+  hiddenInList: false # hide on list pages and home
+  hiddenInSingle: false # hide on single page
 
 outputs:
   home:
@@ -42,7 +47,8 @@ params:
   disableSpecial1stPost: true
   displayFullLangName: true
   ShowPostNavLinks: true
-  ShowBreadCrumbs: true
+  # do not show Home > Posts on top of a post
+  ShowBreadCrumbs: false
   ShowCodeCopyButtons: true
   ShowRssButtonInSectionTermList: true
   ShowToc: true
