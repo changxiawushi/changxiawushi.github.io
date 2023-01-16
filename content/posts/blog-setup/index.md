@@ -289,7 +289,7 @@ GitHub Pages也通过一个action（`pages-build-deployment`）来部署网页�
 - 更改网页图标，根据[PaperMod的教程](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-faq/#adding-custom-favicons)尝试了一些图，再用[Favicon.io](https://favicon.io/)生成图片后直接复制到`static`文件夹中。打开浏览器的DevTools，再右键刷新图标选择"Empty cache and hard refresh"就能看到了
   ![hard-refresh](./images/hard-refresh.png#center)
 - 搜索功能，跟着[PaperMod的步骤](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/#search-page)走非常简单
-- 添加评论区，结合[PaperMod](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/#comments)和[Hugo](https://gohugo.io/content-management/comments/)的指南，先注册了[Disqus](https://disqus.com/)账号，然后选择Universal Code，再复制黏贴到`layouts/partials/comments.html`中就好啦！
+- 添加评论区，结合[PaperMod](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/#comments)和[Hugo](https://gohugo.io/content-management/comments/)的指南，先注册了[Disqus](https://disqus.com/)账号，然后选择Universal Code，再复制黏贴到`layouts/partials/comments.html`中就好啦！（还更改了[表情设置](https://help.disqus.com/en/articles/2199501-reactions)和[允许不注册账号留言](https://help.disqus.com/en/articles/1717211-guest-commenting)）
   ![disqus-comment](./images/disqus-comment.png#center)
 
 ## 一些困难
