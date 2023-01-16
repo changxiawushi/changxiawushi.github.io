@@ -136,7 +136,7 @@ menu:
       url: tags/
       weight: 2
     - name: RSS订阅
-      url: rss/
+      url: index.xml
       weight: 3
     - name: 友情链接
       url: friends/
