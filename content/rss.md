@@ -1,7 +1,7 @@
 ---
 title: "RSS订阅"
-date: 2023-01-15T16:14:48-08:00
 draft: false
+ShowReadingTime: false
 ---
 
 可以通过RSS订阅本博客的所有文章：[https://changxiawushi.github.io/index.xml](../index.xml)

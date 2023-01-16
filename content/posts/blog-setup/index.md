@@ -144,7 +144,16 @@ menu:
 ```
 添加完就会出现在页面右上角啦。
 ![menu](./images/menu.png#center)
-想再添加一个菜单选项放友情链接，找了一会儿没发现怎么做，于是凭借猜测创建了`content/friends.md`这个文件。这样`用户名.github.io/friends`就会显示这篇文章。唯一的缺点是它会被当作是普通的博文出现在RSS阅读器中，也会显示发布日期和阅读时间。
+想再添加一个菜单选项放友情链接，找了一会儿没发现怎么做，于是凭借猜测创建了`content/friends.md`这个文件。这样`用户名.github.io/friends`就会显示这篇文章。
+```yaml
+---
+title: "友情链接"
+# 把日期删掉，就不会显示日期了
+draft: false
+# 不显示页面的阅读时间
+ShowReadingTime: false
+---
+```
 
 ![friends](./images/friends.png#center)
 
