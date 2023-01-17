@@ -2,6 +2,7 @@
 title: "RSS订阅"
 draft: false
 ShowReadingTime: false
+comments: false
 ---
 
 可以通过RSS订阅本博客的所有文章：[https://changxiawushi.github.io/index.xml](../index.xml)
