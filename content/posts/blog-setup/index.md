@@ -7,6 +7,8 @@ tags:
   - 记录
 cover:
   image: images/work.jpg
+  relative: true
+  alt: "\"It ain't much, but it's honest work\" meme"
 ---
 
 搭建环境：macOS
