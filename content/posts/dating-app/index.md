@@ -1,7 +1,7 @@
 ---
 title: "Dating app，谁用谁知道（又名：一个女的想不开）"
-date: 2023-01-16T20:54:43-08:00
-draft: true
+date: 2023-01-17T11:54:43-08:00
+draft: false
 summary: 是道德的沦丧，还是人性的扭曲
 ShowToc: false
 cover:
@@ -112,7 +112,7 @@ Hinge上一个比较独特的功能是，有很多可供选择的prompt，比如
 除此之外，压垮我的最后一根稻草（之一）就是Hinge第一次给我推荐的最合适人选。
 
 ![most compatible profile](./images/most-compatible.jpg)
-看着这个资料，我简直不敢相信这是Hinge算法特别推荐的人，简直感觉非常被冒犯。且撇开我对"not political"这个其实相当political的标签有什么看法，单单对"I'll fall for you"的回答就让人非常疑惑。算法，你难道不知道我是亚洲人吗？算法，真有你的！
+看着这个资料，我简直不敢相信这是Hinge算法特别推荐的人，简直感觉非常被冒犯。且撇开我对"not political"这个其实相当political的标签有什么看法，单单对"I'll fall for you"的回答就让人非常疑惑。算法，你难道不知道我是亚（yǎ）洲人吗？算法，真有你的！
 
 ---
 
