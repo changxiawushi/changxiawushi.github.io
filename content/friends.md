@@ -2,6 +2,7 @@
 title: "友情链接"
 draft: false
 ShowReadingTime: false
+comments: false
 ---
 欢迎访问以下友邻 🪐
 
@@ -16,3 +17,4 @@ ShowReadingTime: false
 - 沉默之沙｜云五的自留地 https://yukieyun.net/
 - The Wandering Allison https://thewanderingallison.github.io/
 - 旋转木马鏖战记 https://samsmerrygoround.github.io/
+- 猫猫鱼的角落 https://mmydonn.space/
