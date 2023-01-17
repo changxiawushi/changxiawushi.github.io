@@ -6,6 +6,8 @@ summary: 是道德的沦丧，还是人性的扭曲
 ShowToc: false
 cover:
   image: images/cover.png
+  relative: true
+  alt: "如果我再用dating app的话/我的一些/就是比如说我的容貌我的身材/还有我社交的礼仪/还有美好的品德 美好的性格/甚至是灵魂都会毁了"
 tags:
   - 赛博乐色
   - Dating
