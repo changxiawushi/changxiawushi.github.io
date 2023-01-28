@@ -1,6 +1,16 @@
 # 长夏无事
 一个博客。搭建见 https://changxiawushi.github.io/posts/blog-setup/
 
+## Start Hugo Server
+`hugo server -D`
+
+`-D` 草稿预览
+
+## Hugo Archetypes
+
+`hugo new --kind post-bundle posts/name`
+创建一个post文件夹，里面有index.md和images文件夹。
+
 ## Hugo Shortcodes
 
 `/layouts/shortcodes/`
