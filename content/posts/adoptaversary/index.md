@@ -2,7 +2,7 @@
 title: "女侠回家一周年啦"
 date: 2023-01-29T21:10:55-08:00
 draft: false
-summary: "内含大量猫图和视频"
+summary: "内含大量猫图"
 ShowToc: false
 cover:
   image: images/cover.jpg
