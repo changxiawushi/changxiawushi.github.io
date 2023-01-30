@@ -1,0 +1,20 @@
+{
+  // Custom snippets to insert Markdown/shortcodes quickly.
+  "Markdown Image": {
+    "prefix": "img",
+    "body": [
+      "![](./images/$1#center)",
+      "$2"
+    ],
+    "description": "Markdown image syntax"
+  },
+  "Center text": {
+    "prefix": "center",
+    "body": [
+      "{{< center >}}",
+      "$1",
+      "{{< /center >}}"
+    ],
+    "description": "Center shortcode"
+  }
+}
