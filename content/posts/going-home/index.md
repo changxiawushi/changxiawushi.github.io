@@ -5,7 +5,7 @@ draft: false
 summary: "是没道理的"
 ShowToc: false
 cover:
-  image: images/cover.jpg
+  image: images/IMG_6959.jpeg
   relative: true
   alt: "窗外的水上场景"
 ---
