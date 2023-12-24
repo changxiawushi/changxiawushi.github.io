@@ -8,7 +8,8 @@ cover:
   image: images/cover.png
   relative: true
   alt: "本文提及的专辑封面"
-tags: ["音乐"]
+tags:
+  - 音乐
 ---
 
 {{< center >}}
