@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>本博搭建记录 (Hugo &#43; GitHub Pages) | 长夏无事</title>
+<meta name="keywords" content="记录">
+<meta name="description" content="这可不是一个技术博客呢，别误会了！">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/blog-setup/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/blog-setup/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="http://localhost:1313/posts/blog-setup/">
+  <meta property="og:site_name" content="长夏无事">
+  <meta property="og:title" content="本博搭建记录 (Hugo &#43; GitHub Pages)">
+  <meta property="og:description" content="这可不是一个技术博客呢，别误会了！">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-01-15T21:00:09-08:00">
+    <meta property="article:modified_time" content="2023-01-15T21:00:09-08:00">
+    <meta property="article:tag" content="记录">
+    <meta property="og:image" content="http://localhost:1313/posts/blog-setup/images/work.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://localhost:1313/posts/blog-setup/images/work.jpg">
+<meta name="twitter:title" content="本博搭建记录 (Hugo &#43; GitHub Pages)">
+<meta name="twitter:description" content="这可不是一个技术博客呢，别误会了！">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "http://localhost:1313/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "本博搭建记录 (Hugo + GitHub Pages)",
+      "item": "http://localhost:1313/posts/blog-setup/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "本博搭建记录 (Hugo + GitHub Pages)",
+  "name": "本博搭建记录 (Hugo \u002b GitHub Pages)",
+  "description": "这可不是一个技术博客呢，别误会了！",
+  "keywords": [
+    "记录"
+  ],
+  "articleBody": "搭建环境：macOS\n本文记录了用GitHub Pages+Hugo搭建本博客的过程，仅供参考而非教程（搭建教程可见写得更详细解释得更好的Hugo | 一起动手搭建个人博客吧 | 小球飞鱼 (mantyke.icu)或者更为简单的Markdown博客模版）。\n❗️ 真的不太推荐用这个方法建站，除非你已经有了搭建静态博客的经验，或者是对网页开发有一定的了解，否则真的是太多地方容易出问题了，在不理解的情况下解决问题会很辛苦。经历了全部建站过程的我表示，那些博客平台收钱还是有收钱的道理，能省好多事儿。\n假如你有一定的经验又好奇搭建步骤的话，本篇或许能供你参考。想要看我对这种搭建博客的方式有什么想法可以跳到最后的总结。\n🤠一些不太重要的背景信息🤠 为什么选择Hugo+GitHub Pages呢？几年前我用过GitHub Pages+Jekyll搭建个人博客，所以算是了解搭建过程。但听说了Hugo很久，也发现了PaperMod这个顺眼的模版，就想尝试一番。以及不想花钱 注册GitHub账号 用GitHub Pages建站的话，默认网址会是用户名.github.io。因为暂时没打算买域名，所以纠结了好一会儿选什么用户名好。\n建立GitHub Pages repo 建立一个新的repo，名为用户名.github.io。注意如果GitHub账户是免费plan，这个用来设置GitHub Pages的repo一定要是public repo。\n我选择用GitHub Desktop，跟着官方网页上的步骤来clone repo到本地。\nGitHub Pages | Websites for you and your projects, hosted directly from your GitHub repository. Just edit, push, and your changes are live.\n设置Hugo 根据Quick Start | Hugo (gohugo.io)，打开Terminal：\nbrew install hugo hugo new site 用户名.github.io -f yml --force 因为我已经有Homebrew了，直接用了brew install hugo的方法安装。 需要用刚装好的hugo将repo设置好。因为已经把clone到了本地的一个文件夹里，所以用了--force。-f yml的部分是参考了PaperMod的指示。 设置PaperMod Theme 决定用Hugo的PaperMod这个theme，因为感觉好看，功能看起来也比较全。跟着PaperMod的安装步骤走：Installation · adityatelange/hugo-PaperMod Wiki (github.com)\n刚开始使用了Installation中的Method 1，直接git clone到repo里。但后面碰到了一些问题（详情见下面的发布测试），所以换成了使用Method 2的git submodules。\n最后一步需要修改文件夹里的config.yml，我在Visual Studio Code中打开了整个文件夹（其实用其他plain text editor也可以，不过用VSCode可以直接在里面打开Terminal，比较方便）。把其他行也改了一下，languageCode先删掉了（尝试了一下，如果设置成中文会导致后续有一些不方便的地方，之后有时间再改……吧）。\nbaseURL: https://用户名.github.io/ title: 长夏无事 theme: \"PaperMod\" 根据Hugo的Quick Start，现在已经可以用hugo server预览网站的样子了。现在只有我改的博客标题，旁边的图标可以在日间和夜间模式之间切换。如果修改文件夹里的文件，server都会自动检测到更新并重新build和加载本地预览，并不需要我手动刷新。nice.\n创建第一篇博文 跟着Hugo的步骤，试着创建了第一篇博文。\nQuick Start | Hugo (gohugo.io)\nhugo new posts/hello-world.md 所有的博文都会用Markdown文件，hello-world是文件的名字，也会出现在博文的链接里，即用户名.github.io/posts/hello-word。生成的Markdown文件上方的部分叫Front Matter。\n发现Hugo的默认本地预览不包括草稿，所以关掉了前面的server（Control+C），并输入hugo server -D。\n就这样出现在首页啦。\n修改设置 PaperMod的设置列表：Variables | Front Matter | PaperMod (adityatelange.github.io)\nPaperMod的demo网站：PaperMod (adityatelange.github.io)\n我开始看这个demo网站的设置，并开始搬运到自己的config.yml：hugo-PaperMod/config.yml at exampleSite · adityatelange/hugo-PaperMod (github.com)\n# 一页显示5篇文章 paginate: 5 # 要表情！ enableEmoji: true # params底下的应该是PaperMod的设置 params: env: production defaultTheme: auto ShowReadingTime: true # 刚开始很疑惑为什么我的博文没有像demo站一样在一个框框里，后来发现是第一篇文章有特别的显示设置，把下面这行加上就好啦 disableSpecial1stPost: true ShowPostNavLinks: true ShowBreadCrumbs: true ShowCodeCopyButtons: true ShowRssButtonInSectionTermList: true ShowToc: true 设置了disableSpecial1stPost: true以后，所有的博文都会在框框里啦。\n添加菜单 参考PaperMod的wiki，在config.yml中添加\n# 在页面上方加入菜单 menu: main: - name: 首页 # 回到主页 url: / # 指定“首页”作为第一个出现的 weight: 1 - name: 标签 url: tags/ weight: 2 - name: RSS订阅 url: index.xml weight: 3 - name: 友情链接 url: friends/ weight: 4 添加完就会出现在页面右上角啦。 想再添加一个菜单选项放友情链接，找了一会儿没发现怎么做，于是凭借猜测创建了content/friends.md这个文件。这样用户名.github.io/friends就会显示这篇文章。\n--- title: \"友情链接\" # 把日期删掉，就不会显示日期了 draft: false # 不显示页面的阅读时间 ShowReadingTime: false --- RSS订阅参考了Setting up an RSS feed for a Hugo blog using the PaperMod Theme | by Erica Pisani | Medium。原来Hugo会自动生成RSS用的index.xml，非常方便。只需要在config.yml中添加\noutputs: home: - HTML - RSS - JSON 现在还没有任何标签，所以需要去博文中添加一下测试看看。\n修改博文 标签 --- title: \"Hello World\" date: 2023-01-14T16:14:48-08:00 draft: false summary: 你好哇！ tags： - 测试 - 你好 --- 找到posts/hello-world.md，添加front matter，最后的tags就是标签啦，可以定义多个。这些标签会自动出现在网站/tags（本地预览可能会有些延迟），点击任何一个就会显示所有带此标签的文章。如果想要确认可以将server停掉，再重新开始。 图片 官方链接：Page Resources | Hugo (gohugo.io)\n参考demo网页带图博文的文件结构：hugo-PaperMod/content/posts/papermod/papermod-features at exampleSite · adityatelange/hugo-PaperMod (github.com)\n在content/posts里创建一个新的文件夹hello-world（与原markdown文件同名），把hello-world.md移到新创建的hello-word文件夹里再改名为index.md，最后在hello-world文件夹中另创建一个images文件夹放图片。所以文件夹的结构变为\n/ ├── content/ │ └── posts/ │ └── hello-world/ │ └── images/ │ └── 图片.jpg │ └── index.md 官方指南：Page Bundles\n如果是一开始就想创建page bundle，可以直接使用下面的指令。不过images文件夹还是要自己创建。也可以用bash script优化更多步骤（参考）。\nhugo new posts//index.md 注：在本地预览时如果图片加载不出来，可以把config.yml里的baseURL改成本地预览的链接，如baseURL: http://localhost:1313（参考）。或者用Markdown Editor（比如Typora）查看确认就不用改设置啦。\n再注：用Markdown语法插入图片时，记得./images/xxx.png或者images/xxx.png都可以，但如果用/images/xxx.png则表示images文件夹在根目录里，所以是不对的。\n再再注：保险起见，我安装了ExifTool，并在上传前用它抹去图片中可能暴露个人信息的metadata（参考）。\nbrew install exiftool # 抹去metdata后直接覆盖原图片 exiftool -a -all:all= -r path/to/images -overwrite_original 发布测试 现在可以把本地的文件都push到GitHub，看一下网站的效果啦。\n启用GitHub Pages 在GitHub repo的Settings \u003e Pages 里可以启用该repo的GitHub Pages。Deploy branch我选择的是gh-pages，原因是Hugo提供的action会把处理后的文件push到这个branch。\n设置GitHub Action Hugo的教程里就有一个action的例子，我直接复制了过来。\n创建GitHub Action的时候，因为不熟悉碰到了好多问题。首先是看不到action有在跑，然后发现是把文件放错了位置，一定要放在.github/workflows/这个文件夹里面才可以。放对了位置以后push能看到action在跑，但碰到了另一个error message。\nhugo --minify shell: /usr/bin/bash -e {0} Error: module \"PaperMod\" not found; either add it as a Hugo Module or store it in \"/home/runner/work/changxiawushi.github.io/changxiawushi.github.io/themes\".: module does not exist Total in 0 ms Error: Process completed with exit code 255. 试了一些网上的建议无果以后，随机发现一个使用Hugo和PaperMod主题的站里有.gitmodules这个文件。随即开始尝试把PaperMod用git submodule的方式安装。\n这次不再有前面的错误信息。但是！又碰到了新的问题……\n/usr/bin/git push origin gh-pages remote: Permission to changxiawushi/changxiawushi.github.io.git denied to github-actions[bot]. fatal: unable to access 'https://github.com/changxiawushi/changxiawushi.github.io.git/': The requested URL returned error: 403 Error: Action failed with \"The process '/usr/bin/git' failed with exit code 128\" 经过了漫长的搜索，我终于找到了答案。原来我用的action文件里没有给正确的permission，导致这个action无法push代码。解决方法是在action的文件里加入：\npermissions: contents: write pages: write id-token: write 终于看到了执行成功的action，感人！\n查看网页 GitHub Pages也通过一个action（pages-build-deployment）来部署网页。一旦看到这个action也成功执行，就可以到https://用户名.github.io看看效果了。\n我在手机上打开了网页，并复制了RSS订阅链接，确保可以在RSS阅读器上看到内容。\n一些其他功能 可展开缩起的toggle 参考了这个回答，在layouts/shortcodes/中建立一个文件toggle.html并粘贴了回答中的代码。 图片居中，参考PaperMod的wiki，只要在图片名后面加上#center就可以\n在Markdown中插入HTML代码，参考Simple Shortcode to Insert Raw HTML in Hugo · Ana Ulin\n更改网页图标，根据PaperMod的教程尝试了一些图，再用Favicon.io生成图片后直接复制到static文件夹中。打开浏览器的DevTools，再右键刷新图标选择\"Empty cache and hard refresh\"就能看到了 搜索功能，跟着PaperMod的步骤走非常简单\n添加评论区，结合PaperMod和Hugo的指南，先注册了Disqus账号，然后选择Universal Code，再复制黏贴到layouts/partials/comments.html中就好啦！（还更改了表情设置和允许不注册账号留言） 一些困难 默认语言是英文，我没有改，但其实应该改为中文？没有细查多语言设置，之后或许可参考 hugo-PaperModX/config.default.yml at master · reorx/hugo-PaperModX (github.com) I18n Tutorial: How to Go Multilingual with Hugo | Phrase Hugo vs PaperMod，我总是疑惑信息应该在Hugo的官方文档寻找，还是找PaperMod的 立Flag 后续想做的：\n找一下怎么加citation/reference（例子，找到的一个回答用不了） 学习一下shortcode 官方链接 总结 搭建下来我感觉，用这个方法的好处是\n不要钱 😅 可供折腾的空间比较大 但缺点是\n初始搭建比较费时，可能会碰到各种各样的问题 后续也需要用Markdown写作，某些功能（比如toggle）甚至需要找/写代码 但总算是搭下来啦！一定要多写文才能对得起投进去的时间了。\n感谢阅读，有缘再见。\n",
+  "wordCount" : "481",
+  "inLanguage": "en",
+  "image":"http://localhost:1313/posts/blog-setup/images/work.jpg","datePublished": "2023-01-15T21:00:09-08:00",
+  "dateModified": "2023-01-15T21:00:09-08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/posts/blog-setup/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "长夏无事",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:1313/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="长夏无事 (Alt + H)">长夏无事</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/rss/" title="RSS订阅">
+                    <span>RSS订阅</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="搜索">
+                    <span>搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/friends/" title="友情链接">
+                    <span>友情链接</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      本博搭建记录 (Hugo &#43; GitHub Pages)
+    </h1>
+    <div class="post-meta"><span title='2023-01-15 21:00:09 -0800 PST'>January 15, 2023</span>&nbsp;·&nbsp;3 min
+
+</div>
+  </header> 
+<figure class="entry-cover">
+        <img loading="eager" srcset="http://localhost:1313/posts/blog-setup/images/work_hu_52df5a59a224bf6a.jpg 360w ,http://localhost:1313/posts/blog-setup/images/work_hu_740662a523c03813.jpg 480w ,http://localhost:1313/posts/blog-setup/images/work_hu_a2e238df16450589.jpg 720w ,http://localhost:1313/posts/blog-setup/images/work.jpg 800w" 
+            sizes="(min-width: 768px) 720px, 100vw" src="http://localhost:1313/posts/blog-setup/images/work.jpg" alt="&#34;It ain&#39;t much, but it&#39;s honest work&#34; meme" 
+            width="800" height="450">
+        
+</figure><div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#%e6%b3%a8%e5%86%8cgithub%e8%b4%a6%e5%8f%b7" aria-label="注册GitHub账号">注册GitHub账号</a></li>
+                <li>
+                    <a href="#%e5%bb%ba%e7%ab%8bgithub-pages-repo" aria-label="建立GitHub Pages repo">建立GitHub Pages repo</a></li>
+                <li>
+                    <a href="#%e8%ae%be%e7%bd%aehugo" aria-label="设置Hugo">设置Hugo</a></li>
+                <li>
+                    <a href="#%e8%ae%be%e7%bd%aepapermod-theme" aria-label="设置PaperMod Theme">设置PaperMod Theme</a></li>
+                <li>
+                    <a href="#%e5%88%9b%e5%bb%ba%e7%ac%ac%e4%b8%80%e7%af%87%e5%8d%9a%e6%96%87" aria-label="创建第一篇博文">创建第一篇博文</a></li>
+                <li>
+                    <a href="#%e4%bf%ae%e6%94%b9%e8%ae%be%e7%bd%ae" aria-label="修改设置">修改设置</a><ul>
+                        
+                <li>
+                    <a href="#%e6%b7%bb%e5%8a%a0%e8%8f%9c%e5%8d%95" aria-label="添加菜单">添加菜单</a></li>
+                <li>
+                    <a href="#%e4%bf%ae%e6%94%b9%e5%8d%9a%e6%96%87" aria-label="修改博文">修改博文</a><ul>
+                        
+                <li>
+                    <a href="#%e6%a0%87%e7%ad%be" aria-label="标签">标签</a></li>
+                <li>
+                    <a href="#%e5%9b%be%e7%89%87" aria-label="图片">图片</a></li></ul>
+                </li></ul>
+                </li>
+                <li>
+                    <a href="#%e5%8f%91%e5%b8%83%e6%b5%8b%e8%af%95" aria-label="发布测试">发布测试</a><ul>
+                        
+                <li>
+                    <a href="#%e5%90%af%e7%94%a8github-pages" aria-label="启用GitHub Pages">启用GitHub Pages</a></li>
+                <li>
+                    <a href="#%e8%ae%be%e7%bd%aegithub-action" aria-label="设置GitHub Action">设置GitHub Action</a></li>
+                <li>
+                    <a href="#%e6%9f%a5%e7%9c%8b%e7%bd%91%e9%a1%b5" aria-label="查看网页">查看网页</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e4%b8%80%e4%ba%9b%e5%85%b6%e4%bb%96%e5%8a%9f%e8%83%bd" aria-label="一些其他功能">一些其他功能</a></li>
+                <li>
+                    <a href="#%e4%b8%80%e4%ba%9b%e5%9b%b0%e9%9a%be" aria-label="一些困难">一些困难</a></li>
+                <li>
+                    <a href="#%e7%ab%8bflag" aria-label="立Flag">立Flag</a></li>
+                <li>
+                    <a href="#%e6%80%bb%e7%bb%93" aria-label="总结">总结</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>搭建环境：macOS</p>
+<p>本文记录了用GitHub Pages+Hugo搭建本博客的过程，仅供参考而非教程（搭建教程可见写得更详细解释得更好的<a href="https://mantyke.icu/posts/2021/hugo-build-blog/">Hugo | 一起动手搭建个人博客吧 | 小球飞鱼 (mantyke.icu)</a>或者<a href="https://go5.dev/@madstick/109667387895709907">更为简单的Markdown博客模版</a>）。</p>
+<p>❗️ 真的不太推荐用这个方法建站，除非你已经有了搭建静态博客的经验，或者是对网页开发有一定的了解，否则真的是太多地方容易出问题了，在不理解的情况下解决问题会很辛苦。经历了全部建站过程的我表示，那些博客平台收钱还是有收钱的道理，能省好多事儿。</p>
+<p>假如你有一定的经验又好奇搭建步骤的话，本篇或许能供你参考。想要看我对这种搭建博客的方式有什么想法可以跳到最后的<a href="#%E6%80%BB%E7%BB%93">总结</a>。</p>
+<details>
+  <summary>🤠一些不太重要的背景信息🤠</summary>
+  为什么选择Hugo+GitHub Pages呢？几年前我用过GitHub Pages+Jekyll搭建个人博客，所以算是了解搭建过程。但听说了Hugo很久，也发现了<a href="https://adityatelange.github.io/hugo-PaperMod/">PaperMod</a>这个顺眼的模版，就想尝试一番。<del>以及不想花钱</del>
+</details>
+<hr>
+<h2 id="注册github账号">注册GitHub账号<a hidden class="anchor" aria-hidden="true" href="#注册github账号">#</a></h2>
+<p>用GitHub Pages建站的话，默认网址会是<code>用户名.github.io</code>。因为暂时没打算买域名，所以纠结了好一会儿选什么用户名好。</p>
+<h2 id="建立github-pages-repo">建立GitHub Pages repo<a hidden class="anchor" aria-hidden="true" href="#建立github-pages-repo">#</a></h2>
+<p><img alt="建立repo" loading="lazy" src="/posts/blog-setup/images/create-repo.png#center"></p>
+<p>建立一个新的repo，名为<code>用户名.github.io</code>。注意如果GitHub账户是免费plan，这个用来设置GitHub Pages的repo一定要是public repo。</p>
+<p>我选择用GitHub Desktop，跟着官方网页上的步骤来clone repo到本地。</p>
+<p><a href="https://pages.github.com/">GitHub Pages | Websites for you and your projects, hosted directly from your GitHub repository. Just edit, push, and your changes are live.</a></p>
+<h2 id="设置hugo">设置Hugo<a hidden class="anchor" aria-hidden="true" href="#设置hugo">#</a></h2>
+<p>根据<a href="https://gohugo.io/getting-started/quick-start/">Quick Start | Hugo (gohugo.io)</a>，打开Terminal：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install hugo
+</span></span><span style="display:flex;"><span>hugo new site 用户名.github.io -f yml --force
+</span></span></code></pre></div><ol>
+<li>因为我已经有<a href="https://brew.sh/">Homebrew</a>了，直接用了<code>brew install hugo</code>的方法安装。</li>
+<li>需要用刚装好的hugo将repo设置好。因为已经把clone到了本地的一个文件夹里，所以用了<code>--force</code>。<code>-f yml</code>的部分是参考了PaperMod的<a href="https://github.com/adityatelange/hugo-PaperMod/wiki/Installation">指示</a>。</li>
+</ol>
+<h2 id="设置papermod-theme">设置PaperMod Theme<a hidden class="anchor" aria-hidden="true" href="#设置papermod-theme">#</a></h2>
+<p>决定用Hugo的PaperMod这个theme，因为感觉好看，功能看起来也比较全。跟着PaperMod的安装步骤走：<a href="https://github.com/adityatelange/hugo-PaperMod/wiki/Installation">Installation · adityatelange/hugo-PaperMod Wiki (github.com)</a></p>
+<p>刚开始使用了Installation中的Method 1，直接git clone到repo里。但后面碰到了一些问题（详情见下面的<a href="#%E5%8F%91%E5%B8%83%E6%B5%8B%E8%AF%95">发布测试</a>），所以换成了使用Method 2的git submodules。</p>
+<p>最后一步需要修改文件夹里的<code>config.yml</code>，我在Visual Studio Code中打开了整个文件夹（其实用其他plain text editor也可以，不过用VSCode可以直接在里面打开Terminal，比较方便）。把其他行也改了一下，<code>languageCode</code>先删掉了（尝试了一下，如果设置成中文会导致后续有一些不方便的地方，之后有时间再改……吧）。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">baseURL</span>: <span style="color:#ae81ff">https://用户名.github.io/</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#ae81ff">长夏无事</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">theme</span>: <span style="color:#e6db74">&#34;PaperMod&#34;</span>
+</span></span></code></pre></div><p>根据Hugo的<a href="https://gohugo.io/getting-started/quick-start/">Quick Start</a>，现在已经可以用<code>hugo server</code>预览网站的样子了。现在只有我改的博客标题，旁边的图标可以在日间和夜间模式之间切换。如果修改文件夹里的文件，server都会自动检测到更新并重新build和加载本地预览，并不需要我手动刷新。nice.</p>
+<p><img alt="blog-initial-setup" loading="lazy" src="/posts/blog-setup/images/initial-blog-preview.png#center"></p>
+<h2 id="创建第一篇博文">创建第一篇博文<a hidden class="anchor" aria-hidden="true" href="#创建第一篇博文">#</a></h2>
+<p>跟着Hugo的步骤，试着创建了第一篇博文。</p>
+<p><a href="https://gohugo.io/getting-started/quick-start/#add-content">Quick Start | Hugo (gohugo.io)</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new posts/hello-world.md
+</span></span></code></pre></div><p>所有的博文都会用Markdown文件，<code>hello-world</code>是文件的名字，也会出现在博文的链接里，即<code>用户名.github.io/posts/hello-word</code>。生成的Markdown文件上方的部分叫<a href="https://gohugo.io/content-management/front-matter/">Front Matter</a>。</p>
+<p>发现Hugo的默认本地预览不包括草稿，所以关掉了前面的server（Control+C），并输入<code>hugo server -D</code>。</p>
+<p>就这样出现在首页啦。</p>
+<p><img alt="first-post-preview" loading="lazy" src="/posts/blog-setup/images/first-post-preview.png#center"></p>
+<h2 id="修改设置">修改设置<a hidden class="anchor" aria-hidden="true" href="#修改设置">#</a></h2>
+<p>PaperMod的设置列表：<a href="https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-variables/">Variables | Front Matter | PaperMod (adityatelange.github.io)</a></p>
+<p>PaperMod的demo网站：<a href="https://adityatelange.github.io/hugo-PaperMod/">PaperMod (adityatelange.github.io)</a></p>
+<p>我开始看这个demo网站的设置，并开始搬运到自己的<code>config.yml</code>：<a href="https://github.com/adityatelange/hugo-PaperMod/blob/exampleSite/config.yml">hugo-PaperMod/config.yml at exampleSite · adityatelange/hugo-PaperMod (github.com)</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># 一页显示5篇文章</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">paginate</span>: <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 要表情！</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">enableEmoji</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># params底下的应该是PaperMod的设置</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">params</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">env</span>: <span style="color:#ae81ff">production</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">defaultTheme</span>: <span style="color:#ae81ff">auto</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">ShowReadingTime</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># 刚开始很疑惑为什么我的博文没有像demo站一样在一个框框里，后来发现是第一篇文章有特别的显示设置，把下面这行加上就好啦</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">disableSpecial1stPost</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">ShowPostNavLinks</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">ShowBreadCrumbs</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">ShowCodeCopyButtons</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">ShowRssButtonInSectionTermList</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">ShowToc</span>: <span style="color:#66d9ef">true</span>
+</span></span></code></pre></div><p>设置了<code>disableSpecial1stPost: true</code>以后，所有的博文都会在框框里啦。</p>
+<p><img alt="config-update-card" loading="lazy" src="/posts/blog-setup/images/config-update-card.png#center"></p>
+<h3 id="添加菜单">添加菜单<a hidden class="anchor" aria-hidden="true" href="#添加菜单">#</a></h3>
+<p>参考<a href="https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#add-menu-to-site">PaperMod的wiki</a>，在<code>config.yml</code>中添加</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># 在页面上方加入菜单</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">menu</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">main</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">首页</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># 回到主页</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">url</span>: <span style="color:#ae81ff">/</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># 指定“首页”作为第一个出现的</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">weight</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">标签</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">url</span>: <span style="color:#ae81ff">tags/</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">weight</span>: <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">RSS订阅</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">url</span>: <span style="color:#ae81ff">index.xml</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">weight</span>: <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">友情链接</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">url</span>: <span style="color:#ae81ff">friends/</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">weight</span>: <span style="color:#ae81ff">4</span>
+</span></span></code></pre></div><p>添加完就会出现在页面右上角啦。
+<img alt="menu" loading="lazy" src="/posts/blog-setup/images/menu.png#center">
+想再添加一个菜单选项放友情链接，找了一会儿没发现怎么做，于是凭借猜测创建了<code>content/friends.md</code>这个文件。这样<code>用户名.github.io/friends</code>就会显示这篇文章。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;友情链接&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 把日期删掉，就不会显示日期了</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">draft</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 不显示页面的阅读时间</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">ShowReadingTime</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><p><img alt="friends" loading="lazy" src="/posts/blog-setup/images/friends.png#center"></p>
+<p>RSS订阅参考了<a href="https://medium.com/@ericapisani/setting-up-an-rss-feed-for-a-hugo-blog-using-the-papermod-theme-a141b3fa1ccd">Setting up an RSS feed for a Hugo blog using the PaperMod Theme | by Erica Pisani | Medium</a>。原来Hugo会自动生成RSS用的<code>index.xml</code>，非常方便。只需要在<code>config.yml</code>中添加</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">outputs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">home</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">HTML</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">RSS</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">JSON</span>
+</span></span></code></pre></div><p>现在还没有任何标签，所以需要去博文中添加一下测试看看。</p>
+<h3 id="修改博文">修改博文<a hidden class="anchor" aria-hidden="true" href="#修改博文">#</a></h3>
+<h4 id="标签">标签<a hidden class="anchor" aria-hidden="true" href="#标签">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>title: &#34;Hello World&#34;
+</span></span><span style="display:flex;"><span>date: 2023-01-14T16:14:48-08:00
+</span></span><span style="display:flex;"><span>draft: false
+</span></span><span style="display:flex;"><span>summary: 你好哇！
+</span></span><span style="display:flex;"><span>tags：
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 测试
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 你好
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><p>找到<code>posts/hello-world.md</code>，添加front matter，最后的tags就是标签啦，可以定义多个。这些标签会自动出现在<code>网站/tags</code>（本地预览可能会有些延迟），点击任何一个就会显示所有带此标签的文章。如果想要确认可以将server停掉，再重新开始。
+<img alt="tags" loading="lazy" src="/posts/blog-setup/images/tags.png#center"></p>
+<h4 id="图片">图片<a hidden class="anchor" aria-hidden="true" href="#图片">#</a></h4>
+<p>官方链接：<a href="https://gohugo.io/content-management/page-resources/">Page Resources | Hugo (gohugo.io)</a></p>
+<p>参考demo网页带图博文的文件结构：<a href="https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content/posts/papermod/papermod-features">hugo-PaperMod/content/posts/papermod/papermod-features at exampleSite · adityatelange/hugo-PaperMod (github.com)</a></p>
+<p>在<code>content/posts</code>里创建一个新的文件夹<code>hello-world</code>（与原markdown文件同名），把<code>hello-world.md</code>移到新创建的<code>hello-word</code>文件夹里再改名为<code>index.md</code>，最后在<code>hello-world</code>文件夹中另创建一个<code>images</code>文件夹放图片。所以文件夹的结构变为</p>
+<pre tabindex="0"><code>/
+├── content/
+│   └── posts/
+│       └── hello-world/
+│           └── images/
+│               └── 图片.jpg
+│           └── index.md
+</code></pre><p>官方指南：<a href="https://gohugo.io/content-management/page-bundles/">Page Bundles</a></p>
+<p>如果是一开始就想创建page bundle，可以直接使用下面的指令。不过<code>images</code>文件夹还是要自己创建。也可以用bash script优化更多步骤（<a href="https://discourse.gohugo.io/t/is-there-a-hugo-command-to-create-page-bundle/11942/2">参考</a>）。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new posts/&lt;post-name&gt;/index.md
+</span></span></code></pre></div><blockquote>
+<p>注：在本地预览时如果图片加载不出来，可以把<code>config.yml</code>里的<code>baseURL</code>改成本地预览的链接，如<code>baseURL: http://localhost:1313</code>（<a href="https://discourse.gohugo.io/t/preview-images-with-localhost/33095">参考</a>）。或者用Markdown Editor（比如Typora）查看确认就不用改设置啦。</p></blockquote>
+<blockquote>
+<p>再注：用Markdown语法插入图片时，记得<code>./images/xxx.png</code>或者<code>images/xxx.png</code>都可以，但如果用<code>/images/xxx.png</code>则表示<code>images</code>文件夹在根目录里，所以是不对的。</p></blockquote>
+<blockquote>
+<p>再再注：保险起见，我安装了<a href="https://exiftool.org/">ExifTool</a>，并在上传前用它抹去图片中可能暴露个人信息的metadata（<a href="https://stackoverflow.com/questions/66192531/exiftool-how-to-remove-all-metadata-from-all-files-possible-inside-a-folder-an">参考</a>）。</p></blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install exiftool
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 抹去metdata后直接覆盖原图片</span>
+</span></span><span style="display:flex;"><span>exiftool -a -all:all<span style="color:#f92672">=</span> -r path/to/images -overwrite_original
+</span></span></code></pre></div><h2 id="发布测试">发布测试<a hidden class="anchor" aria-hidden="true" href="#发布测试">#</a></h2>
+<p>现在可以把本地的文件都push到GitHub，看一下网站的效果啦。</p>
+<h3 id="启用github-pages">启用GitHub Pages<a hidden class="anchor" aria-hidden="true" href="#启用github-pages">#</a></h3>
+<p>在GitHub repo的Settings &gt; Pages 里可以启用该repo的GitHub Pages。Deploy branch我选择的是<code>gh-pages</code>，原因是Hugo提供的action会把处理后的文件push到这个branch。</p>
+<h3 id="设置github-action">设置GitHub Action<a hidden class="anchor" aria-hidden="true" href="#设置github-action">#</a></h3>
+<p>Hugo的<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">教程</a>里就有一个action的例子，我直接复制了过来。</p>
+<p>创建GitHub Action的时候，因为不熟悉碰到了好多问题。首先是看不到action有在跑，然后发现是把文件放错了位置，一定要放在<code>.github/workflows/</code>这个文件夹里面才可以。放对了位置以后push能看到action在跑，但碰到了另一个error message。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo --minify
+</span></span><span style="display:flex;"><span>  shell: /usr/bin/bash -e <span style="color:#f92672">{</span>0<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>Error: module <span style="color:#e6db74">&#34;PaperMod&#34;</span> not found; either add it as a Hugo Module or store it in <span style="color:#e6db74">&#34;/home/runner/work/changxiawushi.github.io/changxiawushi.github.io/themes&#34;</span>.: module does not exist
+</span></span><span style="display:flex;"><span>Total in <span style="color:#ae81ff">0</span> ms
+</span></span><span style="display:flex;"><span>Error: Process completed with exit code 255.
+</span></span></code></pre></div><p>试了一些网上的建议无果以后，随机发现一个使用Hugo和PaperMod主题的站里有<a href="https://github.com/mzfr/mzfr.github.io/blob/f02722a1499b155816d1cc15d81a74af6864c0c6/.gitmodules"><code>.gitmodules</code></a>这个文件。随即开始尝试把PaperMod用git submodule的方式安装。</p>
+<p>这次不再有前面的错误信息。但是！又碰到了新的问题……</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/usr/bin/git push origin gh-pages
+</span></span><span style="display:flex;"><span>  remote: Permission to changxiawushi/changxiawushi.github.io.git denied to github-actions<span style="color:#f92672">[</span>bot<span style="color:#f92672">]</span>.
+</span></span><span style="display:flex;"><span>  fatal: unable to access <span style="color:#e6db74">&#39;https://github.com/changxiawushi/changxiawushi.github.io.git/&#39;</span>: The requested URL returned error: <span style="color:#ae81ff">403</span>
+</span></span><span style="display:flex;"><span>  Error: Action failed with <span style="color:#e6db74">&#34;The process &#39;/usr/bin/git&#39; failed with exit code 128&#34;</span>
+</span></span></code></pre></div><p>经过了漫长的搜索，我终于找到了答案。原来我用的action文件里没有给正确的permission，导致这个action无法push代码。解决方法是在action的文件里加入：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">permissions</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">contents</span>: <span style="color:#ae81ff">write</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">pages</span>: <span style="color:#ae81ff">write</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">id-token</span>: <span style="color:#ae81ff">write</span>
+</span></span></code></pre></div><p>终于看到了执行成功的action，感人！</p>
+<p><img alt="action-success" loading="lazy" src="/posts/blog-setup/images/action-success.png#center"></p>
+<h3 id="查看网页">查看网页<a hidden class="anchor" aria-hidden="true" href="#查看网页">#</a></h3>
+<p>GitHub Pages也通过一个action（<code>pages-build-deployment</code>）来部署网页。一旦看到这个action也成功执行，就可以到<code>https://用户名.github.io</code>看看效果了。</p>
+<p>我在手机上打开了网页，并复制了RSS订阅链接，确保可以在RSS阅读器上看到内容。</p>
+<h2 id="一些其他功能">一些其他功能<a hidden class="anchor" aria-hidden="true" href="#一些其他功能">#</a></h2>
+<ul>
+<li>
+<details>
+  <summary>可展开缩起的toggle</summary>
+  参考了<a href="https://discourse.gohugo.io/t/unable-to-use-collapsible-expand-markdown/32810/2">这个回答</a>，在<code>layouts/shortcodes/</code>中建立一个文件<code>toggle.html</code>并粘贴了回答中的代码。
+</details>
+</li>
+<li>
+<p>图片居中，参考<a href="https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#centering-image-in-markdown">PaperMod的wiki</a>，只要在图片名后面加上<code>#center</code>就可以</p>
+</li>
+<li>
+<p>在Markdown中插入HTML代码，参考<a href="https://anaulin.org/blog/hugo-raw-html-shortcode/">Simple Shortcode to Insert Raw HTML in Hugo · Ana Ulin</a></p>
+</li>
+<li>
+<p>更改网页图标，根据<a href="https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-faq/#adding-custom-favicons">PaperMod的教程</a>尝试了一些图，再用<a href="https://favicon.io/">Favicon.io</a>生成图片后直接复制到<code>static</code>文件夹中。打开浏览器的DevTools，再右键刷新图标选择&quot;Empty cache and hard refresh&quot;就能看到了
+<img alt="hard-refresh" loading="lazy" src="/posts/blog-setup/images/hard-refresh.png#center"></p>
+</li>
+<li>
+<p>搜索功能，跟着<a href="https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/#search-page">PaperMod的步骤</a>走非常简单</p>
+</li>
+<li>
+<p>添加评论区，结合<a href="https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/#comments">PaperMod</a>和<a href="https://gohugo.io/content-management/comments/">Hugo</a>的指南，先注册了<a href="https://disqus.com/">Disqus</a>账号，然后选择Universal Code，再复制黏贴到<code>layouts/partials/comments.html</code>中就好啦！（还更改了<a href="https://help.disqus.com/en/articles/2199501-reactions">表情设置</a>和<a href="https://help.disqus.com/en/articles/1717211-guest-commenting">允许不注册账号留言</a>）
+<img alt="disqus-comment" loading="lazy" src="/posts/blog-setup/images/disqus-comment.png#center"></p>
+</li>
+</ul>
+<h2 id="一些困难">一些困难<a hidden class="anchor" aria-hidden="true" href="#一些困难">#</a></h2>
+<ul>
+<li>默认语言是英文，我没有改，但其实应该改为中文？没有细查多语言设置，之后或许可参考
+<ul>
+<li><a href="https://github.com/reorx/hugo-PaperModX/blob/master/exampleSite/config.default.yml">hugo-PaperModX/config.default.yml at master · reorx/hugo-PaperModX (github.com)</a></li>
+<li><a href="https://phrase.com/blog/posts/i18n-tutorial-how-to-go-multilingual-with-hugo/">I18n Tutorial: How to Go Multilingual with Hugo | Phrase</a></li>
+</ul>
+</li>
+<li>Hugo vs PaperMod，我总是疑惑信息应该在Hugo的官方文档寻找，还是找PaperMod的</li>
+</ul>
+<h2 id="立flag">立Flag<a hidden class="anchor" aria-hidden="true" href="#立flag">#</a></h2>
+<p>后续想做的：</p>
+<ul>
+<li>找一下怎么加citation/reference（<a href="https://kpwn.de/2021/09/how-to-set-up-this-blog/#fn:1">例子</a>，找到的一个<a href="https://discourse.gohugo.io/t/cite-within-a-post/27172/2">回答</a>用不了）</li>
+<li>学习一下shortcode
+<ul>
+<li><a href="https://gohugo.io/content-management/shortcodes/">官方链接</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="总结">总结<a hidden class="anchor" aria-hidden="true" href="#总结">#</a></h2>
+<p>搭建下来我感觉，用这个方法的好处是</p>
+<ul>
+<li>不要钱 😅</li>
+<li>可供折腾的空间比较大</li>
+</ul>
+<p>但缺点是</p>
+<ul>
+<li>初始搭建比较费时，可能会碰到各种各样的问题</li>
+<li>后续也需要用Markdown写作，某些功能（比如toggle）甚至需要找/写代码</li>
+</ul>
+<p>但总算是搭下来啦！一定要多写文才能对得起投进去的时间了。</p>
+<p>感谢阅读，有缘再见。</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/%E8%AE%B0%E5%BD%95/">记录</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/dating-app/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Dating app，谁用谁知道（又名：一个女的想不开）</span>
+  </a>
+</nav>
+
+  </footer><div id="disqus_thread"></div>
+<script>
+    
+
+    
+
+    (function() { 
+    var d = document, s = d.createElement('script');
+    s.src = 'https://https-changxiawushi-github-io.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">长夏无事</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

@@ -2,13 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://changxiawushi.github.io/friends/</loc>
-    <lastmod>2023-01-14T16:14:48-08:00</lastmod>
+    <loc>http://localhost:1313/posts/2023-music/</loc>
+    <lastmod>2023-12-23T22:26:11-08:00</lastmod>
   </url><url>
-    <loc>https://changxiawushi.github.io/categories/</loc>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2023-12-23T22:26:11-08:00</lastmod>
   </url><url>
-    <loc>https://changxiawushi.github.io/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2023-12-23T22:26:11-08:00</lastmod>
   </url><url>
-    <loc>https://changxiawushi.github.io/</loc>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2023-12-23T22:26:11-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E9%9F%B3%E4%B9%90/</loc>
+    <lastmod>2023-12-23T22:26:11-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/poetry/</loc>
+    <lastmod>2023-02-26T23:54:32-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/jin-ye-you-xue/</loc>
+    <lastmod>2023-02-26T23:54:32-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/adoptaversary/</loc>
+    <lastmod>2023-01-29T21:10:55-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E7%8C%AB/</loc>
+    <lastmod>2023-01-29T21:10:55-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/dating/</loc>
+    <lastmod>2023-01-17T11:54:43-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/dating-app/</loc>
+    <lastmod>2023-01-17T11:54:43-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E8%B5%9B%E5%8D%9A%E4%B9%90%E8%89%B2/</loc>
+    <lastmod>2023-01-17T11:54:43-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/blog-setup/</loc>
+    <lastmod>2023-01-15T21:00:09-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2023-01-15T21:00:09-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/rss/</loc>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
+  </url><url>
+    <loc>http://localhost:1313/friends/</loc>
   </url>
 </urlset>

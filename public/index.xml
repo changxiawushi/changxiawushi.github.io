@@ -2,17 +2,87 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>长夏无事</title>
-    <link>https://changxiawushi.github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on 长夏无事</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://changxiawushi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.143.0</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 23 Dec 2023 22:26:11 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2023听歌总结</title>
+      <link>http://localhost:1313/posts/2023-music/</link>
+      <pubDate>Sat, 23 Dec 2023 22:26:11 -0800</pubDate>
+      <guid>http://localhost:1313/posts/2023-music/</guid>
+      <description>和音乐重新联结</description>
+    </item>
+    <item>
+      <title>今夜有雪</title>
+      <link>http://localhost:1313/posts/jin-ye-you-xue/</link>
+      <pubDate>Sun, 26 Feb 2023 23:54:32 -0800</pubDate>
+      <guid>http://localhost:1313/posts/jin-ye-you-xue/</guid>
+      <description>❄️</description>
+    </item>
+    <item>
+      <title>女侠回家一周年啦</title>
+      <link>http://localhost:1313/posts/adoptaversary/</link>
+      <pubDate>Sun, 29 Jan 2023 21:10:55 -0800</pubDate>
+      <guid>http://localhost:1313/posts/adoptaversary/</guid>
+      <description>内含大量猫图</description>
+    </item>
+    <item>
+      <title>Dating app，谁用谁知道（又名：一个女的想不开）</title>
+      <link>http://localhost:1313/posts/dating-app/</link>
+      <pubDate>Tue, 17 Jan 2023 11:54:43 -0800</pubDate>
+      <guid>http://localhost:1313/posts/dating-app/</guid>
+      <description>是道德的沦丧，还是人性的扭曲</description>
+    </item>
+    <item>
+      <title>本博搭建记录 (Hugo &#43; GitHub Pages)</title>
+      <link>http://localhost:1313/posts/blog-setup/</link>
+      <pubDate>Sun, 15 Jan 2023 21:00:09 -0800</pubDate>
+      <guid>http://localhost:1313/posts/blog-setup/</guid>
+      <description>这可不是一个技术博客呢，别误会了！</description>
+    </item>
+    <item>
+      <title>RSS订阅</title>
+      <link>http://localhost:1313/rss/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/rss/</guid>
+      <description>&lt;p&gt;可以通过RSS订阅本博客的所有文章：&lt;a href=&#34;../index.xml&#34;&gt;https://changxiawushi.github.io/index.xml&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;也可以打开&lt;a href=&#34;../tags&#34;&gt;标签页&lt;/a&gt;，点击想要订阅的标签，再点下面这个样子的订阅按钮就好了。⬇️&lt;/p&gt;
+
+
+&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34;
+  stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; height=&#34;23&#34;&gt;
+  &lt;path d=&#34;M4 11a9 9 0 0 1 9 9&#34; /&gt;
+  &lt;path d=&#34;M4 4a16 16 0 0 1 16 16&#34; /&gt;
+  &lt;circle cx=&#34;5&#34; cy=&#34;19&#34; r=&#34;1&#34; /&gt;
+&lt;/svg&gt;</description>
+    </item>
     <item>
       <title>友情链接</title>
-      <link>https://changxiawushi.github.io/friends/</link>
-      <pubDate>Sat, 14 Jan 2023 16:14:48 -0800</pubDate>
-      
-      <guid>https://changxiawushi.github.io/friends/</guid>
-      <description>欢迎拜访以下星球</description>
+      <link>http://localhost:1313/friends/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/friends/</guid>
+      <description>&lt;p&gt;欢迎访问以下友邻 🪐&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;东风吹柳 &lt;a href=&#34;https://dongfeng.space/&#34;&gt;https://dongfeng.space/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;呼猫护卫 &lt;a href=&#34;https://qingshanbadass.notion.site/qingshanbadass/e3d519283a9f4412acc1d174ec94e30d&#34;&gt;https://qingshanbadass.notion.site/qingshanbadass/e3d519283a9f4412acc1d174ec94e30d&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;椒盐鸵鸟 &lt;a href=&#34;https://blog.douchi.space/&#34;&gt;https://blog.douchi.space/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;茶碗岛上茶包仔 &lt;a href=&#34;https://teabagteapot.github.io/&#34;&gt;https://teabagteapot.github.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;灰色闪电⚡️ &lt;a href=&#34;https://writee.org/hui-se-shan-dian/&#34;&gt;https://writee.org/hui-se-shan-dian/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;春额的第 N 个博客 &lt;a href=&#34;https://brookclin.notion.site/&#34;&gt;https://brookclin.notion.site/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Shiori ʕ•ᴥ•ʔ &lt;a href=&#34;https://shioriblog.github.io/&#34;&gt;https://shioriblog.github.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;一笼虾饺有四个 &lt;a href=&#34;https://fourxiajiao.github.io/&#34;&gt;https://fourxiajiao.github.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;沉默之沙｜云五的自留地 &lt;a href=&#34;https://yukieyun.net/&#34;&gt;https://yukieyun.net/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The Wandering Allison &lt;a href=&#34;https://thewanderingallison.github.io/&#34;&gt;https://thewanderingallison.github.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;旋转木马鏖战记 &lt;a href=&#34;https://samsmerrygoround.github.io/&#34;&gt;https://samsmerrygoround.github.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;猫猫鱼的角落 &lt;a href=&#34;https://mmydonn.space/&#34;&gt;https://mmydonn.space/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;云卷云舒 &lt;a href=&#34;https://ephemeris.page/&#34;&gt;https://ephemeris.page/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;康康’s Blog &lt;a href=&#34;https://misswiggg.typlog.io/&#34;&gt;https://misswiggg.typlog.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;李一桃🍑 &lt;a href=&#34;https://yitaoli2023.github.io/yitaoli/&#34;&gt;https://yitaoli2023.github.io/yitaoli/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;旋转木马鏖战记 &lt;a href=&#34;https://samsmerrygoround.github.io/&#34;&gt;https://samsmerrygoround.github.io/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
   </channel>
 </rss>

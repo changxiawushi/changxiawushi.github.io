@@ -1,6 +1,15 @@
 # 长夏无事
 一个博客。搭建见 https://changxiawushi.github.io/posts/blog-setup/
 
+## After cloning
+
+需要安装和更新git submodules
+
+```
+git submodule init
+git submodule update --remote --merge
+```
+
 ## Start Hugo Server
 `hugo server -D`
 
