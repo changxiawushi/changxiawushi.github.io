@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>画画 on 长夏无事</title>
+    <link>http://localhost:1313/tags/%E7%94%BB%E7%94%BB/</link>
+    <description>Recent content in 画画 on 长夏无事</description>
+    <generator>Hugo -- 0.143.0</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 03 Feb 2025 15:48:46 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E7%94%BB%E7%94%BB/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>水彩新尝试：纯棉浆纸与冬日雪景</title>
+      <link>http://localhost:1313/posts/2025-02-03-winter-landscape-watercolor/</link>
+      <pubDate>Mon, 03 Feb 2025 15:48:46 -0800</pubDate>
+      <guid>http://localhost:1313/posts/2025-02-03-winter-landscape-watercolor/</guid>
+      <description>画画记录</description>
+    </item>
+  </channel>
+</rss>
