@@ -2,18 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on 长夏无事</title>
-    <link>https://changxiawushi.github.io/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on 长夏无事</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 14 Jan 2023 16:14:48 -0800</lastBuildDate><atom:link href="https://changxiawushi.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.143.0</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 23 Dec 2023 22:26:11 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hello World</title>
-      <link>https://changxiawushi.github.io/posts/hello-world/</link>
-      <pubDate>Sat, 14 Jan 2023 16:14:48 -0800</pubDate>
-      
-      <guid>https://changxiawushi.github.io/posts/hello-world/</guid>
-      <description>你好哇！</description>
+      <title>2023听歌总结</title>
+      <link>http://localhost:1313/posts/2023-music/</link>
+      <pubDate>Sat, 23 Dec 2023 22:26:11 -0800</pubDate>
+      <guid>http://localhost:1313/posts/2023-music/</guid>
+      <description>和音乐重新联结</description>
     </item>
-    
+    <item>
+      <title>今夜有雪</title>
+      <link>http://localhost:1313/posts/jin-ye-you-xue/</link>
+      <pubDate>Sun, 26 Feb 2023 23:54:32 -0800</pubDate>
+      <guid>http://localhost:1313/posts/jin-ye-you-xue/</guid>
+      <description>❄️</description>
+    </item>
+    <item>
+      <title>女侠回家一周年啦</title>
+      <link>http://localhost:1313/posts/adoptaversary/</link>
+      <pubDate>Sun, 29 Jan 2023 21:10:55 -0800</pubDate>
+      <guid>http://localhost:1313/posts/adoptaversary/</guid>
+      <description>内含大量猫图</description>
+    </item>
+    <item>
+      <title>Dating app，谁用谁知道（又名：一个女的想不开）</title>
+      <link>http://localhost:1313/posts/dating-app/</link>
+      <pubDate>Tue, 17 Jan 2023 11:54:43 -0800</pubDate>
+      <guid>http://localhost:1313/posts/dating-app/</guid>
+      <description>是道德的沦丧，还是人性的扭曲</description>
+    </item>
+    <item>
+      <title>本博搭建记录 (Hugo &#43; GitHub Pages)</title>
+      <link>http://localhost:1313/posts/blog-setup/</link>
+      <pubDate>Sun, 15 Jan 2023 21:00:09 -0800</pubDate>
+      <guid>http://localhost:1313/posts/blog-setup/</guid>
+      <description>这可不是一个技术博客呢，别误会了！</description>
+    </item>
   </channel>
 </rss>

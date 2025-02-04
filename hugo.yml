@@ -1,18 +1,14 @@
 baseURL: https://changxiawushi.github.io/
 # Test locally
 # baseURL: http://localhost:1313
-# languageCode: zh-CN
 title: 长夏无事
 theme: "PaperMod"
 
-paginate: 5
 enableEmoji: true
 disqusShortname: https-changxiawushi-github-io
+pagination:
+  pagerSize: 5
 
-# defaultContentLanguage: zh-CN
-# languages:
-#     zh-CN:
-#       languageName: 中文
 menu:
   main:
     - name: 首页
@@ -47,7 +43,6 @@ params:
   defaultTheme: auto
   ShowReadingTime: true
   disableSpecial1stPost: true
-  displayFullLangName: true
   ShowPostNavLinks: true
   # do not show Home > Posts on top of a post
   ShowBreadCrumbs: false
@@ -55,3 +50,4 @@ params:
   ShowRssButtonInSectionTermList: true
   ShowToc: true
   comments: true
+  social: true
