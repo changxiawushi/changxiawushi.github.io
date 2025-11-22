@@ -14,7 +14,7 @@ tags:
 
 我是从2024年11月开始尝试画水彩的。今年1月份开始上一个短期的水彩入门课，到最近终于入手了纯棉浆纸（100% cotton paper）。
 
-虽然之前看[网上的测评视频](https://www.youtube.com/watch?v=zEC0-PRmw10)就有感触，但是真的自己试了才切身体会到100% cotton水彩纸的效果有多好。特别是wet-in-wet（一种水彩技巧），在纯棉浆纸上的效果和我之前用的Canson XL完全不是一个档次，让我的练习动力蹭蹭上升。我买的是Arches cold press 140 lbs, 22 x 30 inch 的artist sheet，可以切分成8小张，每一张还能继续分割成2-4块更小的区域练习。
+虽然之前看[网上的测评视频](https://www.youtube.com/watch?v=zEC0-PRmw10)就有感触，但是真的自己试了才切身体会到100% cotton水彩纸的效果有多好。特别是wet-in-wet（一种水彩技巧），在纯棉浆纸上的效果和我之前用的Canson XL完全不是一个档次，让我的练习动力蹭蹭上升。我买的是Arches cold press 140 lb, 22 x 30 inch 的artist sheet，可以切分成8小张，每一张还能继续分割成2-4块更小的区域练习。
 
 因为最近下雪，我就找了一个winter landscape的新手教程跟着画，感觉比较简单而且只用了Ultramarine和Burnt Umber两种颜色： https://www.youtube.com/watch?v=KgGhQqXsL5E
 
